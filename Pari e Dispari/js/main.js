@@ -50,5 +50,3 @@ if(pariodispari == valore){
 else {
     alert('pc vincitore');
 }
-
-
