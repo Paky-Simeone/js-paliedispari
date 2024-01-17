@@ -3,11 +3,14 @@ const pariodispari = prompt('scegli pari o dispari');
 console.log(pariodispari);
 const numeroUtente = parseInt(prompt('Scegli un numero da 1 a 5'));
 console.log("il numero dell'utente è: " + numeroUtente);
+let valore;
+
 
 // Controllo se il numero utente è effettivamente un numero o meno
 if(isNaN(numeroUtente)){
     alert('il valore inserito non è un numero, riprova.');
 }
+
 
 // Creo funzione per generare un numero random
 function getRandomNumber(min, max){
@@ -27,9 +30,11 @@ console.log('la somma di utente e cpu è: ' + numerofinale);
 function getParioDispari(numero){
     if(numero % 2 == 0){
         // alert('la somma è pari');
+        valore = 'pari';
         console.log('il numero finale è pari');
     }else{
         // alert('la somma è dispari');
+        valore = 'disap'
         console.log('il numero finale è dispari');
     }
 
@@ -39,9 +44,10 @@ function getParioDispari(numero){
 console.log(getParioDispari(numerofinale));
 
 // Stampo il vincitore
-if(pariodispari == pari){
+if(pariodispari == valore){
     alert('utente vincitore');
-}else {
+}
+else {
     alert('pc vincitore');
 }
 
